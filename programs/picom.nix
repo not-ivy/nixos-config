@@ -1,4 +1,4 @@
-{inputs, pkg, lib, ...}: {
+{inputs, pkgs, lib, ...}: {
   services.picom = {
     enable = true;
     backend = "egl";

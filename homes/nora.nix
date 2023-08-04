@@ -5,6 +5,11 @@
 
   programs.home-manager.enable = true;
 
+  home = {
+    username = "nora";
+    homeDirectory = "/home/nora";
+  };
+
   home.persistence."/nix/persist/home/nora" = {
     directories = [
       ".ssh"
@@ -43,6 +48,8 @@
     enable = true;
   #  defaultEditor = true;
   };
+
+  systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.05";
